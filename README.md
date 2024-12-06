@@ -1,19 +1,21 @@
 # JSON to TOML Converter
 
-A simple command-line tool that converts JSON files into TOML format.
+A simple command-line tool that converts JSON files into TOML format, available in both Python and Bash implementations.
 
 ## Overview
 
-This project provides a straightforward way to convert JSON files to TOML format using a command-line interface. It's designed to be simple and efficient, making it easy to integrate into scripts or use manually.
+This project provides straightforward ways to convert JSON files to TOML format using command-line interfaces. It's designed to be simple and efficient, making it easy to integrate into scripts or use manually.
 
-## Requirements
+## Python Implementation
+
+### Requirements
 
 - Python 3.x
 - Required libraries:
   - `json` (built-in)
   - `toml`
 
-## Installation
+### Installation
 
 1. Clone the repository:
 
@@ -28,7 +30,7 @@ cd json_to_toml_converter
 python3 --version
 ```
 
-If Python is not installed, you can install it:
+If Python is not installed:
 
 ```bash
 sudo apt install python3
@@ -40,37 +42,77 @@ sudo apt install python3
 pip install -r requirements.txt
 ```
 
-## Usage
-
-To convert a JSON file to TOML format, use the following command:
+### Usage
 
 ```bash
 python3 convert.py <input_json_file> <output_toml_file>
 ```
 
-For example:
+Example:
 
 ```bash
 python3 convert.py input.json output.toml
+```
+
+## Bash Implementation
+
+### Requirements
+
+- `jq` (JSON processor)
+- `yq` (YAML/TOML processor)
+
+### Installation
+
+Install dependencies:
+
+```bash
+# Ubuntu/Debian
+sudo apt-get install jq yq
+
+# macOS
+brew install jq yq
+```
+
+### Usage
+
+```bash
+chmod +x convert.sh
+./convert.sh <input_json_file> <output_toml_file>
+```
+
+Example:
+
+```bash
+./convert.sh input.json output.toml
 ```
 
 ## Project Structure
 
 ```
 json_to_toml_converter/
-|-- convert.py       # Main conversion script
+|-- convert.py       # Python conversion script
+|-- convert.sh       # Bash conversion script
 |-- requirements.txt # List of required libraries
 |-- README.md       # Project documentation
 ```
 
 ## Error Handling
 
-The script will display an error message if:
+Both scripts handle errors for:
 
-- Incorrect number of command-line arguments are provided
-- Input file cannot be read
-- Output file cannot be written
-- JSON parsing fails
+- Incorrect command-line arguments
+- Missing input files
+- Invalid JSON format
+- File permission issues
+- Missing dependencies (Bash version)
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests for any improvements.
+
+## License
+
+[MIT License](https://mit-license.org/)
 
 ## Contributing
 
