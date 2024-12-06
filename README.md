@@ -54,66 +54,6 @@ Example:
 python3 convert.py input.json output.toml
 ```
 
-## Bash Implementation
-
-### Requirements
-
-- `jq` (JSON processor)
-- `yq` (YAML/TOML processor)
-
-### Installation
-
-Install dependencies:
-
-```bash
-# Ubuntu/Debian
-sudo apt-get install jq yq
-
-# macOS
-brew install jq yq
-```
-
-### Usage
-
-```bash
-chmod +x convert.sh
-./convert.sh <input_json_file> <output_toml_file>
-```
-
-Example:
-
-```bash
-./convert.sh input.json output.toml
-```
-
-## Project Structure
-
-```
-json_to_toml_converter/
-|-- convert.py       # Python conversion script
-|-- convert.sh       # Bash conversion script
-|-- requirements.txt # List of required libraries
-|-- README.md       # Project documentation
-```
-
-## Error Handling
-
-Both scripts handle errors for:
-
-- Incorrect command-line arguments
-- Missing input files
-- Invalid JSON format
-- File permission issues
-- Missing dependencies (Bash version)
-
-## Contributing
-
-Feel free to fork the repository and submit pull requests for any improvements.
-
-## License
-
-[MIT License](https://mit-license.org/)
-
 ## Contributing
 
 Feel free to fork the repository and submit pull requests for any improvements.
