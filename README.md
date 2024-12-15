@@ -54,10 +54,6 @@ Example:
 python3 convert.py input.json output.toml
 ```
 
-## Contributing
-
-Feel free to fork the repository and submit pull requests for any improvements.
-
 ## License
 
 [MIT License](https://mit-license.org/)
