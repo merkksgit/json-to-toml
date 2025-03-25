@@ -53,7 +53,3 @@ Example:
 ```bash
 python3 convert.py input.json output.toml
 ```
-
-## License
-
-[MIT License](https://mit-license.org/)
